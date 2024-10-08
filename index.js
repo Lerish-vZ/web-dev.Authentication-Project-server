@@ -5,7 +5,8 @@ const app = express();
 require("dotenv").config();
 const { MONGO_URL, PORT } = process.env;
 
-//const PORT = 4000;
+console.log("MONGO_URL:", MONGO_URL);
+console.log("PORT:", PORT);
 
 mongoose.connect(MONGO_URL, {
     useNewUrlParser: true, 
