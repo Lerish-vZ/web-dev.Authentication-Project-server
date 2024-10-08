@@ -17,3 +17,13 @@ mongoose.connect(MONGO_URL, {
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
+
+app.use(
+    cors({
+        origin: ["http://localhost:4000"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: true,
+    })
+);
+
+app.use(express.json());
