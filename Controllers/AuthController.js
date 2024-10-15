@@ -15,6 +15,7 @@ module.exports.Signup = async (req, res, next) => {
       withCredentials: true,
       httpOnly: false,
     });
+    // console.log(token);
     res
       .status(201)
       .json({ message: "User signed in successfully", success: true, user });
